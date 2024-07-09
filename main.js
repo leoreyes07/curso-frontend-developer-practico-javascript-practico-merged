@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuHamIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const iconCartMenu = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.product-detail');
+const shoppingCratContainer = document.querySelector('#shoppingCratContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 
@@ -12,20 +12,20 @@ menuHamIcon.addEventListener('click', toggleMobileMenu);
 iconCartMenu.addEventListener('click', toggleAsideCart);
 
 function toggleDesktopMenu() {
-    const isAsideClosed = aside.classList.contains('inactive')
+    const isAsideClosed = shoppingCratContainer.classList.contains('inactive')
 
     if (!isAsideClosed) {
-        aside.classList.add('inactive');
+        shoppingCratContainer.classList.add('inactive');
     }
 
     desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu() {
-    const isAsideClosed = aside.classList.contains('inactive')
+    const isAsideClosed = shoppingCratContainer.classList.contains('inactive')
 
     if (!isAsideClosed) {
-        aside.classList.add('inactive');
+        shoppingCratContainer.classList.add('inactive');
     }
 
     mobileMenu.classList.toggle('inactive');
@@ -38,7 +38,7 @@ function toggleAsideCart() {
         mobileMenu.classList.add('inactive');
     }
 
-    aside.classList.toggle('inactive');
+    shoppingCratContainer.classList.toggle('inactive');
 }   
 
 const productList = [];
@@ -60,7 +60,7 @@ productList.push({
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
 
-productList.push({
+/* productList.push({
     name: 'Bike',
     price: 120,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -76,7 +76,7 @@ productList.push({
     name: 'Laptop',
     price: 620,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
+}); */
 
 /* <div class="product-card">
         <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Product image">
